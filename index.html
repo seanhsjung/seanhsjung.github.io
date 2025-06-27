@@ -42,12 +42,10 @@
     footer { padding: 2rem 1rem; background: var(--color-bg); text-align: center; }
     #home { text-align: center; padding-top: 8rem; }
     .avatar { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 5px solid var(--color-primary); margin-bottom: 1rem; }
-    /* Experience list */
     #experience .experience-list { margin: 0; padding: 0; list-style: none; }
     #experience .experience-list li { margin-bottom: 2rem; }
     #experience .experience-list h3 { font-weight: 600; margin-bottom: .5rem; color: var(--color-text); text-align: center; }
     #experience .experience-list em { color: #888888; display: block; text-align: center; margin-bottom: .5rem; }
-    /* Center align all experience paragraphs */
     #experience .experience-list li p { text-align: center; }
     #projects .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
     #projects .project { background: var(--color-box); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(255,255,255,0.1); transition: transform var(--transition); }
@@ -75,7 +73,7 @@
 
   <section id="home">
     <div class="container">
-      <img src="avatar.jpg" alt="Avatar" class="avatar">
+      <img src="images/avatar.jpg" alt="Avatar" class="avatar">
       <h1>Hi, I’m Sean.</h1>
       <p>I’m a data analyst with a passion for transforming music rights data into actionable insights.<br>
       With 3+ years of experience in music publishing at Sony, I build dashboards, workflows, and automations that help executives make faster decisions and teams work smarter.<br>
@@ -96,8 +94,27 @@
       <h2>Experience Overview</h2>
       <p class="overview-blurb"><em>For more detailed experience, check out my <a href="assets/resume/Sean_Jung_Resume.pdf" target="_blank">resume here!</a></em></p>
       <ul class="experience-list">
-        <li><h3>Senior Coordinator, Copyright – Sony Music Publishing</h3><p><em>Feb 2024 – Present</em></p><p>Build Power BI dashboards and write SQL queries to deliver real-time insights to senior leadership on writer performance and partnership ROI.</p><p>Develop Python scripts and Power Automate flows to eliminate manual tasks across registration and metadata processes, accelerating workflows and freeing teams for strategic work.</p></li>
-        <li><h3>Coordinator, Sync Licensing – Sony Music Publishing</h3><p><em>May 2022 – Feb 2024</em></p><p>Designed Power BI reporting tools to support sync licensing strategy and provide managers with actionable KPIs.</p><p>Streamlined internal workflows using Excel and VBA, improving accuracy and turnaround times across invoicing and license processing.</p></li>
+        <li>
+          <h3>Analyst, Indie Business – Sony Music Publishing, Nashville</h3>
+          <p><em>June 2025 – Present</em></p>
+          <p>Develop and maintain two live Power BI dashboards for BeatStars / The Orchard, giving the EVP of Finance & Corporate Strategy same-day visibility into high-growth writers and partnership performance.</p>
+          <p>Automate copyright-registration intake with new Python scripts and Power Automate flows, freeing staff for deeper analysis and cutting manual steps.</p>
+          <p>Mentor a Senior Coordinator and a Coordinator; serve as global SME for BI and workflow automation across global offices.</p>
+        </li>
+        <li>
+          <h3>Senior Coordinator, Copyright – Sony Music Publishing, Nashville</h3>
+          <p><em>February 2024 – June 2025</em></p>
+          <p>Created the Power Automate + Microsoft Lists workflows that manage registration and writer metadata, removing bottlenecks and accelerating correspondence.</p>
+          <p>Integrated Luminate streaming data into Lists task trackers so writer-performance metrics drive real-time prioritization.</p>
+          <p>Developed reusable SQL queries against AWS Redshift to surface ad-hoc writer and royalty collection data.</p>
+        </li>
+        <li>
+          <h3>Coordinator, Sync Licensing – Sony Music Publishing, Nashville</h3>
+          <p><em>May 2022 – February 2024</em></p>
+          <p>Designed a sync licensing dashboard that provided management greater team insight with near real-time KPIs.</p>
+          <p>Built Excel/VBA macros and led user-acceptance testing on new automation tools, streamlining licensing and invoicing workflows.</p>
+          <p>Managed high-volume sync license requests, coordinating with Creative Marketing and external partners to ensure timely delivery.</p>
+        </li>
       </ul>
     </div>
   </section>
@@ -106,8 +123,8 @@
     <div class="container">
       <h2>Projects</h2>
       <div class="projects">
-        <div class="project"><img src="project1.png" alt="Project 1 screenshot (values blurred for confidentiality)"><div class="project-content"><h3>BeatStars/The Orchard Dashboards</h3><p>Developed executive-facing Power BI dashboards for senior leadership, delivering real-time visibility into writer performance, catalog growth, and partnership ROI.</p><small class="confidential-note">*Values blurred to protect company financials.*</small></div></div>
-        <div class="project"><a href="https://ui-top10growth.onrender.com/" target="_blank"><img src="project2.png" alt="Monstercat Top 10 Growth Dashboard"></a><div class="project-content"><h3>Monstercat Top 10 Growth Dashboard</h3><p>The Monstercat Top 10 Growth Dashboard surfaces the fastest-growing artists in the Monstercat roster based on Spotify follower trends.</p><a href="https://ui-top10growth.onrender.com/" target="_blank">Click to View Dashboard</a></div></div>
+        <div class="project"><img src="images/project1.png" alt="BeatStars/The Orchard Dashboards"><div class="project-content"><h3>BeatStars/The Orchard Dashboards</h3><p>Developed executive-facing Power BI dashboards for senior leadership, delivering real-time visibility into writer performance, catalog growth, and partnership ROI.</p><small class="confidential-note">*Values blurred to protect company financials.*</small></div></div>
+        <div class="project"><a href="https://ui-top10growth.onrender.com/" target="_blank"><img src="images/project2.png" alt="Monstercat Top 10 Growth Dashboard"></a><div class="project-content"><h3>Monstercat Top 10 Growth Dashboard</h3><p>The Monstercat Top 10 Growth Dashboard surfaces the fastest-growing artists in the Monstercat roster based on Spotify follower trends.</p><a href="https://ui-top10growth.onrender.com/" target="_blank">View Dashboard</a></div></div>
       </div>
     </div>
   </section>
@@ -128,7 +145,7 @@
     <div class="container">
       <div class="social-icons">
         <div class="icon-wrapper"><a href="https://linkedin.com/in/seanhsjung" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a><div class="icon-label">LinkedIn</div></div>
-        <div class="icon-wrapper"><a href="assets/resume/Sean_Jung_Resume.pdf" target="_blank"><ion-icon name="document-text-outline"></ion-icon></a><div class="icon-label">Resume</div></div>
+        <div class="icon-wrapper"><a href="assets/resume/Sean_Jung_Resume_June2025.pdf" target="_blank"><ion-icon name="document-text-outline"></ion-icon></a><div class="icon-label">Resume</div></div>
         <div class="icon-wrapper"><a href="https://seanhsjung.github.io/" target="_blank"><ion-icon name="globe-outline"></ion-icon></a><div class="icon-label">Portfolio</div></div>
       </div>
     </div>
