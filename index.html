@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <style>
+    :root {
+      --color-primary: #4e73df;
+      --color-bg: #28282B;
+      --color-box: #1e1e1e;
+      --color-text: #cccccc;
+      --transition: 0.3s ease;
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: var(--color-bg); color: var(--color-text); }
+    nav { position: fixed; top: 0; width: 100%; background: var(--color-bg); box-shadow: 0 2px 4px rgba(255,255,255,0.1); z-index: 100; }
+    nav ul { display: flex; justify-content: center; list-style: none; margin: 0; padding: 1rem 0; }
+    nav ul li { margin: 0 1.5rem; }
+    nav ul li a { text-decoration: none; color: var(--color-text); font-weight: 500; transition: color var(--transition); }
+    nav ul li a:hover, nav ul li a.active { color: var(--color-primary); }
+    section { padding: 5rem 1rem 3rem; }
+    .container { max-width: 960px; margin: 0 auto; }
+    h2 { font-size: 2rem; margin-bottom: 1.5rem; position: relative; text-align: center; }
+    h2::after { content: ''; position: absolute; width: 50px; height: 3px; background: var(--color-primary); bottom: -10px; left: 50%; transform: translateX(-50%); }
+    .divider { width: 100%; height: 4px; background: var(--color-primary); margin: 0; }
+    .overview-blurb { text-align: center; margin-bottom: 2rem; }
+    .overview-blurb a { color: var(--color-primary); text-decoration: none; }
+    .icon-wrapper { display: inline-block; text-align: center; margin: 0 0.75rem; }
+    .icon-wrapper ion-icon { font-size: 2rem; --ionicon-color: var(--color-text); transition: transform var(--transition); }
+    .icon-wrapper:hover ion-icon { transform: translateY(-5px); }
+    .icon-label { font-size: 0.85rem; margin-top: 0.25rem; color: var(--color-text); }
+    footer { padding: 2rem 1rem; background: var(--color-bg); text-align: center; }
+    #home { text-align: center; padding-top: 8rem; }
+    .avatar { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 5px solid var(--color-primary); margin-bottom: 1rem; }
+    /* Experience list */
+    #experience .experience-list { margin: 0; padding: 0; list-style: none; }
+    #experience .experience-list li { margin-bottom: 2rem; }
+    #experience .experience-list h3 { font-weight: 600; margin-bottom: .5rem; color: var(--color-text); text-align: center; }
+    #experience .experience-list em { color: #888888; display: block; text-align: center; margin-bottom: .5rem; }
+    /* Center align all experience paragraphs */
+    #experience .experience-list li p { text-align: center; }
+    #projects .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    #projects .project { background: var(--color-box); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(255,255,255,0.1); transition: transform var(--transition); }
+    #projects .project:hover { transform: translateY(-5px); }
+    #projects .project img { width: 100%; display: block; }
+    #projects .project-content { padding: 1rem; }
+    .confidential-note { font-size: 0.85rem; color: #888888; margin-top: 0.5rem; font-style: italic; text-align: center; }
+    #contact form { background: var(--color-box); padding: 2rem; border-radius: 8px; box-shadow: 0 2px 6px rgba(255,255,255,0.1); display: flex; flex-direction: column; }
+    #contact form input, #contact form textarea { width: 100%; box-sizing: border-box; font-family: 'Poppins', sans-serif; border: 1px solid #444444; border-radius: 4px; margin-bottom: 1rem; padding: .75rem; background: transparent; color: var(--color-text); transition: border-color var(--transition); }
+    #contact form input::placeholder, #contact form textarea::placeholder { color: #777777; }
+    #contact form input:focus, #contact form textarea:focus { border-color: var(--color-primary); outline: none; }
+    #contact form button { width: 100%; background: var(--color-primary); color: #fff; border: none; padding: .75rem; border-radius: 4px; cursor: pointer; font-weight: 500; transition: background var(--transition); }
+    #contact form button:hover { background: #3b5bd1; }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#experience">Experience Overview</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <div class="container">
+      <img src="images/avatar.jpg" alt="Avatar" class="avatar">
+      <h1>Hi, I’m Sean.</h1>
+      <p>I’m a data analyst with a passion for transforming music rights data into actionable insights.<br>
+      With 3+ years of experience in music publishing at Sony, I build dashboards, workflows, and automations that help executives make faster decisions and teams work smarter.<br>
+      Whether it’s integrating streaming data to prioritize high-growth writers or replacing manual workflows with Python and Power Automate, I specialize in turning complex rights and royalty data into tools for strategic action.
+      </p>
+      <div class="social-icons">
+        <div class="icon-wrapper"><a href="https://linkedin.com/in/seanhsjung" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a><div class="icon-label">LinkedIn</div></div>
+        <div class="icon-wrapper"><a href="assets/resume/Sean_Jung_Resume.pdf" target="_blank"><ion-icon name="document-text-outline"></ion-icon></a><div class="icon-label">Resume</div></div>
+        <div class="icon-wrapper"><a href="https://yourportfolio.com" target="_blank"><ion-icon name="globe-outline"></ion-icon></a><div class="icon-label">Portfolio</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="experience">
+    <div class="container">
+      <h2>Experience Overview</h2>
+      <p class="overview-blurb"><em>For more detailed experience, check out my <a href="assets/resume/Sean_Jung_Resume.pdf" target="_blank">resume here!</a></em></p>
+      <ul class="experience-list">
+        <li><h3>Senior Coordinator, Copyright – Sony Music Publishing</h3><p><em>Feb 2024 – Present</em></p><p>Build Power BI dashboards and write SQL queries to deliver real-time insights to senior leadership on writer performance and partnership ROI.</p><p>Develop Python scripts and Power Automate flows to eliminate manual tasks across registration and metadata processes, accelerating workflows and freeing teams for strategic work.</p></li>
+        <li><h3>Coordinator, Sync Licensing – Sony Music Publishing</h3><p><em>May 2022 – Feb 2024</em></p><p>Designed Power BI reporting tools to support sync licensing strategy and provide managers with actionable KPIs.</p><p>Streamlined internal workflows using Excel and VBA, improving accuracy and turnaround times across invoicing and license processing.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project"><img src="images/project1.png" alt="Project 1 screenshot (values blurred for confidentiality)"><div class="project-content"><h3>BeatStars/The Orchard Dashboards</h3><p>Developed executive-facing Power BI dashboards for senior leadership, delivering real-time visibility into writer performance, catalog growth, and partnership ROI.</p><small class="confidential-note">*Values blurred to protect company financials.*</small></div></div>
+        <div class="project"><a href="https://ui-top10growth.onrender.com/" target="_blank"><img src="images/project2.png" alt="Monstercat Top 10 Growth Dashboard"></a><div class="project-content"><h3>Monstercat Top 10 Growth Dashboard</h3><p>The Monstercat Top 10 Growth Dashboard surfaces the fastest-growing artists in the Monstercat roster based on Spotify follower trends.</p><a href="https://ui-top10growth.onrender.com/" target="_blank">View Dashboard</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="social-icons">
+        <div class="icon-wrapper"><a href="https://linkedin.com/in/seanhsjung" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a><div class="icon-label">LinkedIn</div></div>
+        <div class="icon-wrapper"><a href="assets/resume/Sean_Jung_Resume.pdf" target="_blank"><ion-icon name="document-text-outline"></ion-icon></a><div class="icon-label">Resume</div></div>
+        <div class="icon-wrapper"><a href="https://yourportfolio.com" target="_blank"><ion-icon name="globe-outline"></ion-icon></a><div class="icon-label">Portfolio</div></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
